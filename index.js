@@ -20,7 +20,7 @@ let hideWatchedVideos = () => {
 	let countOfHiddenVideos = 0;
 	let progresses = document.getElementsByClassName("style-scope ytd-thumbnail-overlay-resume-playback-renderer");
 	for(let i=0; i < progresses.length; i++) {
-		let video = progresses[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+		let video = progresses[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
 		if (hideVideoIfNotAlreadyHidden(video)) {
 			countOfHiddenVideos++;
 		}
@@ -42,7 +42,7 @@ let hideVideosShorterThan = (time) => {
 		if(videosLength[i].innerText == "") continue;
 		
 		if(videosLength[i].innerText.split(":")[0] < time) {
-			let video = videosLength[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+			let video = videosLength[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
 			if (hideVideoIfNotAlreadyHidden(video)) {
 				countOfHiddenVideos++;
 			}
